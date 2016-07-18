@@ -45,6 +45,8 @@ const Tokens = {
 
   scopeEmptyOrBreak: () => Tokens.scope(Tokens.empty(), Tokens.break()),
   scopeEmptyOrComma: () => Tokens.scope(Tokens.empty(), Tokens.comma()),
+  scopeEmptyOrSpace: () => Tokens.scope(Tokens.empty(), Tokens.space()),
+  scopeEmptyOr: (broken) => Tokens.scope(Tokens.empty(), broken),
   scopeSpaceOrBreak: () => Tokens.scope(Tokens.space(), Tokens.break()),
   scopeEmptyOrOpenParen: () => Tokens.scope(Tokens.empty(), Tokens.string('(')),
   scopeEmptyOrCloseParen: () => Tokens.scope(

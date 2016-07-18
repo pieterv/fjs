@@ -11,6 +11,8 @@ const IGNORE = new Set([
   'scopeEmptyOrBreak',
   'scopeEmptyOrCloseParen',
   'scopeEmptyOrComma',
+  'scopeEmptyOrSpace',
+  'scopeEmptyOr',
   'scopeEmptyOrDedent',
   'scopeEmptyOrIndent',
   'scopeEmptyOrOpenParen',

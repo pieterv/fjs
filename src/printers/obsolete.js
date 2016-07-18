@@ -6,7 +6,4 @@
 
 import assert from 'assert';
 
-export default {
-  ArrayTypeAnnotation: () => assert(false, 'Obsolete node type.'),
-  ObjectTypeAnnotation: () => assert(false, 'Obsolete node type.'),
-};
+export default {};

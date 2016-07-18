@@ -721,6 +721,17 @@ var a: [number, string] = [123, \'duck\'];
 "
 `;
 
+exports[`test type-alias.js 1`] = `
+"type FBID = number;
+type Foo<T> = Bar<T>;
+type Maybe<T> = _Maybe<T, *>;
+
+type union = { type: \'A\' } | { type: \'B\' };
+
+type overloads = (x: string) => number & (x: number) => string;
+"
+`;
+
 exports[`test variable-declarator-line-comment.js 1`] = `
 "function test() {
   var // Leading to VariableDeclarator

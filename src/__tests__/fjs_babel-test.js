@@ -28,7 +28,6 @@ testFixtures('babel', new Set([
   'interfaces-module-and-script.js',
   'null-literal-types.js',
   'qualified-generic-type.js',
-  'type-alias.js',
   'type-annotations.js',
   'type-parameters.js',
   'typecasts.js',

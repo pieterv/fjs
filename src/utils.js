@@ -42,8 +42,31 @@ export function printList(items, print, kind) {
         Tokens.scopeSpaceOrBreak(),
       ],
       print(item),
-      i === arr.length - 1 && Tokens.scopeEmptyOrComma(),
-      i === arr.length - 1 && Tokens.scopeEmptyOrBreak(),
+      i === arr.length - 1 && [
+        Tokens.scopeEmptyOrComma(),
+        Tokens.scopeEmptyOrBreak(),
+      ],
+    ]),
+    Tokens.scopeClose(),
+  ];
+}
+
+export function printJoin(items, print, separator) {
+  if (!items) {
+    return null;
+  }
+  return [
+    Tokens.scopeOpen('join'),
+    Tokens.scopeEmptyOrBreak(),
+    Tokens.scopeEmptyOr(separator),
+    Tokens.scopeEmptyOrSpace(),
+    map(items, (item, i, arr) => [
+      i > 0 && [
+        separator,
+        Tokens.space(),
+      ],
+      print(item),
+      i !== arr.length - 1 && Tokens.scopeSpaceOrBreak(),
     ]),
     Tokens.scopeClose(),
   ];
